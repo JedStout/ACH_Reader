@@ -18,7 +18,6 @@ function analyzeData(achData) {
   var data = achData.innerText;
   var textByLine = data.split("\n");
   console.log(textByLine[0]);
-
 }
 
 showButton = (results)=> {document.getElementById(results).style.display = "table";}
