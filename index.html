@@ -17,22 +17,26 @@
             <h2>ACH Data</h2>
         </div>
         <div class="centered">
-            <div class="content"></div>
+            <div class="content" id="achData"></div>
+           
         </div>
         <div id="results" class="results" style="display:none;">
-            <p>Record type: file header</p>
-            <p>Processing priority: 01</p>
-            <p>Destination routing number: 02100002</p>
-            <p>Origin routing number: 1511518020</p>
-            <p>File creation date: 2022/01/25</p>
-            <p>File creation time: 23:15</p>
-            <p>File ID: A</p>
-            <p>Record size: 094</p>
-            <p>Blocking factor: 10</p>
-            <p>Format code: 1</p>
-            <p>Destination bank name: JPMORGAN CHASE BANK</p>
-            <p>Origin name: QA testing tenant</p>
-            <p>Reference code: 00000000</p>
+            <button id="analyze" onclick="analyzeData(achData); showText('analyzeResults')";>Analyze ACH</button>
+            <div id="analyzeResults" style="display:none;">
+                <p>Record type: file header</p>
+                <p>Processing priority: 01</p>
+                <p>Destination routing number: 02100002</p>
+                <p>Origin routing number: 1511518020</p>
+                <p>File creation date: 2022/01/25</p>
+                <p>File creation time: 23:15</p>
+                <p>File ID: A</p>
+                <p>Record size: 094</p>
+                <p>Blocking factor: 10</p>
+                <p>Format code: 1</p>
+                <p>Destination bank name: JPMORGAN CHASE BANK</p>
+                <p>Origin name: QA testing tenant</p>
+                <p>Reference code: 00000000</p>
+            </div>
         </div>
     </body>
     <script src="/js/testData.js"></script>

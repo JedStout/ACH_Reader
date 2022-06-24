@@ -6,8 +6,7 @@ function importData() {
   reader.addEventListener("load", () => {
     content.innerText = reader.result;
     var achstring = reader.result;
-    var textByLine = achstring.split("\n");
-    console.log(textByLine[0]);
+    return achstring;
   });
 
   if (file) {
@@ -15,7 +14,12 @@ function importData() {
   }
 }
 
-function showText(results)
-{
-    document.getElementById(results).style.display = "table";
+function analyzeData(achData) {
+  var data = achData.innerText;
+  var textByLine = data.split("\n");
+  console.log(textByLine[0]);
+
 }
+
+showButton = (results)=> {document.getElementById(results).style.display = "table";}
+showText = (analyzeResults)=> {document.getElementById(analyzeResults).style.display = "table";}
