@@ -6,7 +6,8 @@ function importData() {
   reader.addEventListener("load", () => {
     content.innerText = reader.result;
     var achstring = reader.result;
-    stringifyData(achstring);
+    var textByLine = achstring.split("\n");
+    console.log(textByLine[0]);
   });
 
   if (file) {
@@ -14,6 +15,7 @@ function importData() {
   }
 }
 
-function stringifyData(achstring) {
-  console.log(achstring);
+function showText(results)
+{
+    document.getElementById(results).style.display = "table";
 }
