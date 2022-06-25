@@ -21,9 +21,9 @@
             <div class="content" id="achData"></div>
         </div>
         <div id="results" class="results" style="display:none;"><br>
-            <button id="analyze" onclick="analyzeData(achData); showText('analyzeResults')";>Analyze ACH</button>
+            <button id="analyze" onclick="analyzeData(achData); showText('analyzeResults', 'recordType')";>Analyze ACH</button>
             <div id="analyzeResults" style="display:none;">
-                <p>Record type: file header</p>
+                <p>Record type: file header</p><p id="recordType" style="display:none;">Record Type is 1 and ACH will continue processing</p>
                 <p>Processing priority: 01</p>
                 <p>Destination routing number: 02100002</p>
                 <p>Origin routing number: 1511518020</p>
